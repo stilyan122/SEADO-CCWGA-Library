@@ -46,7 +46,7 @@ jobs:
     - name: Run UI playwright tests
       run: npm run ui &
   
- deploy-backend:
+  deploy-backend:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
     needs: ui_tests
