@@ -44,7 +44,7 @@ jobs:
     - name: Download playwright
       run: npx playwright install 
     - name: Run UI playwright tests
-      run: npm run ui
+      run: npm run ui &
   
   deploy_render:
     runs-on: ubuntu-latest
