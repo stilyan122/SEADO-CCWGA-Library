@@ -8,6 +8,8 @@ test('Sumbit the form with valid credentials', async({page}) => {
     await page.fill('input[name="password"]', '123456');
     await page.click('input[type="submit"]');
 
+    await page.waitForURL('http://localhost:3000/catalog');
+
     await page.$('a[href="/catalog"]');
     expect(page.url()).toBe('http://localhost:3000/catalog');
 });

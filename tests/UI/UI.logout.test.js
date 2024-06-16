@@ -6,6 +6,7 @@ test('Verify that the "Logout" button is visible', async ({page}) => {
     await page.fill('input[name="password"]', '123456');
     await page.click('input[type="submit"]');
 
+    await page.waitForURL('http://localhost:3000/catalog');
     const logoutButtonLink = await page.$('a[href="javascript:void(0)"]');
     const islogoutButtonLinkVisible = await logoutButtonLink.isVisible();
 

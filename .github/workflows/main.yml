@@ -27,6 +27,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: npm_config
     steps:
+    - name: Change config file
+      run: echo "export const settings = { host: \"http://localhost:3030\" }" > config.js
     - name: Run server script
       run: npm run start-server &
 
