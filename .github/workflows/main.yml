@@ -48,7 +48,7 @@ jobs:
   
   deploy-backend:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/master'
     needs: ui_tests
     steps:
       - name: Checkout the code
@@ -64,7 +64,7 @@ jobs:
 
   deploy-frontend:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/master'
     needs: deploy-backend
     steps:
       - name: Checkout the code
