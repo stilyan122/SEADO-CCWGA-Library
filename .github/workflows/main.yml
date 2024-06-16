@@ -28,7 +28,7 @@ jobs:
     needs: npm_config
     steps:
     - name: Go to server folder
-      run: cd ../server
+      run: echo cd
     - name: Run server script
       run: node server.js
 
