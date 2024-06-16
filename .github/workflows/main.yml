@@ -44,5 +44,5 @@ jobs:
     runs-on: ubuntu-latest
     needs: run_fe
     steps:
-    -name: Run UI playwright tests
+    - name: Run UI playwright tests
      run: npm run ui
